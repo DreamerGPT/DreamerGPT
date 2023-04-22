@@ -2,17 +2,21 @@
 
 Project 梦想家 (DreamerGPT) was found by [迟慧璇](https://github.com/ytchx1999)，[徐灏](https://github.com/KingsleyHsu)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)。
 
-## 1、项目介绍
+*Read in [English version](README_EN.md)*.
+
+----
+
+## <img src="assets/project.png" style="vertical-align: middle; width: 35px;"> 1、项目介绍
 
 中文大模型指令精调。
 
-## 2、最近更新
+## <img src="assets/update.png" style="vertical-align: middle; width: 35px;"> 2、最近更新
 
 [2023/04/23] 正式开源中文Alpaca-LoRA指令精调大模型----**梦想家（DreamerGPT）**，目前提供xxx版本下载体验
 
 已开源模型：
 
-## 3、模型和数据准备
+## <img src="assets/model.png" style="vertical-align: middle; width: 35px;"> 3、模型和数据准备
 
 ### 3.1 模型
 
@@ -43,7 +47,7 @@ Project 梦想家 (DreamerGPT) was found by [迟慧璇](https://github.com/ytchx
 | [baize](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/baize) | 中文对话         |
 | [Couplets (预处理成多份，格式对齐)](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/couplets) | 中文             |
 
-## 4、训练代码和脚本
+## <img src="assets/train.png" style="vertical-align: middle; width: 35px;"> 4、训练代码和脚本
 
 代码和脚本介绍：
 
@@ -52,7 +56,7 @@ Project 梦想家 (DreamerGPT) was found by [迟慧璇](https://github.com/ytchx
 - `scripts/`：运行脚本
   - 比如：`scripts/rerun-2-alpaca-13b-2.sh`，各参数解释见`scripts/README.md`
 
-## 5、如何使用
+## <img src="assets/handbook.png" style="vertical-align: middle; width: 35px;"> 5、如何使用
 
 ### 5.1 环境安装
 
@@ -127,22 +131,41 @@ bash save-generate-2-alpaca-13b-2.sh
 -  `--test_input_path 'xxx.json' `：输入的instruction路径
 - 输出结果默认保存在对应LoRA权重目录下的`test.json`中
 
-## 6、评测报告
+## <img src="assets/test.png" style="vertical-align: middle; width: 35px;"> 6、评测报告
 
-come soon!
+*Coming soon!*
 
-## 7、下一版更新内容
+## <img src="assets/next.png" style="vertical-align: middle; width: 35px;">  7、下一版更新内容
 
 - 长文本数据
 - 多轮对话数据
 
-## 局限性、使⽤限制与免责声明
+## <img src="assets/attention.png" style="vertical-align: middle; width: 35px;"> 局限性、使⽤限制与免责声明
+
+基于当前数据和基础模型训练得到的SFT模型，在效果上仍存在以下问题：
+
+- 在涉及事实性的指令上可能会产生违背事实的错误回答。
+
+- 对于具备危害性的指令无法很好的鉴别，可能会产生歧视、危害、违背伦理道德的言论。
+
+- 在一些涉及推理、代码、多轮对话等场景下模型的能力仍有待提高。
+
+**基于以上模型的局限性，我们要求本项目的内容及后续用此项目生成的衍生物仅可应用于学术研究目的，不得用于商业用途及对社会造成危害的用途。项目开发者不承担任何因使用本项目（包含但不限于数据、模型、代码等）导致的任何危害、损失或法律责任。**
 
 
+## <img src="assets/cite.png" style="vertical-align: middle; width: 35px;"> 引⽤
+如果您使用本项目的代码、数据或模型，请您引用本项目。
+```
+@misc{DreamerGPT,
+  author = {Huixuan Chi, Hao Xu, Yuanchen Bei and Danyang Liu},
+  title = {DreamerGPT: xxx},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/DreamerGPT/DreamerGPT}},
+}
+```
 
-## 引⽤
+## <img src="assets/contact.png" style="vertical-align: middle; width: 35px;"> 联系我们
 
-
-
-## 联系我们
-
+邮箱：dreamergpt@gmail.com
