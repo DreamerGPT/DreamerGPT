@@ -1,8 +1,12 @@
-# 梦想家 (DreamerGPT)
+# <img src="assets/hummingbird.png" style="vertical-align: middle; width: 68px;"> 梦想家 (DreamerGPT)
 
-Project 梦想家 (DreamerGPT) was found by [迟慧璇](https://github.com/ytchx1999)，[徐灏](https://github.com/KingsleyHsu)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)。
+**Project 梦想家 (DreamerGPT) was found by [迟慧璇](https://github.com/ytchx1999)，[徐灏](https://github.com/KingsleyHsu)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)。**
 
 *Read in [English version](README_EN.md)*.
+
+<div align=center>
+<img src="assets/climb.jpg" style="vertical-align: middle; width: 500px;">
+</div> 
 
 ----
 
