@@ -33,15 +33,15 @@ Project 梦想家 (DreamerGPT) was found by [迟慧璇](https://github.com/ytchx
 }
 ```
 
-| 数据                                   | 类型             |
-| -------------------------------------- | ---------------- |
-| [Alpaca-GPT4](#)                       | 英文             |
-| [Firefly (预处理成多份，格式对齐)](#)  | 中文             |
-| [COIG](#)                              | 中文、代码、中英 |
-| [PsyQA (预处理成多份，格式对齐)](#)    | 中文心理咨询     |
-| [BELLE](#)                             | 中文             |
-| [baize](#)                             | 中文对话         |
-| [Couplets (预处理成多份，格式对齐)](#) | 中文             |
+| 数据                                                         | 类型             |
+| ------------------------------------------------------------ | ---------------- |
+| [Alpaca-GPT4](https://github.com/tloen/alpaca-lora/blob/main/alpaca_data_gpt4.json) | 英文             |
+| [Firefly (预处理成多份，格式对齐)](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/firefly) | 中文             |
+| [COIG](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/COIG) | 中文、代码、中英 |
+| [PsyQA (预处理成多份，格式对齐)](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/psyQA) | 中文心理咨询     |
+| [BELLE](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/belle) | 中文             |
+| [baize](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/baize) | 中文对话         |
+| [Couplets (预处理成多份，格式对齐)](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/couplets) | 中文             |
 
 ## 4、训练代码和脚本
 
@@ -62,7 +62,7 @@ Project 梦想家 (DreamerGPT) was found by [迟慧璇](https://github.com/ytchx
 pip install -r requirements.txt
 ```
 
-### 5.2模型权重合并
+### 5.2 模型权重合并
 
 权重融合（以alpaca-lora-13b为例）：
 
