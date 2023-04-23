@@ -168,6 +168,7 @@ bash save-generate-2-alpaca-13b-2.sh
 ```python
 come soon
 ```
+ChatGPT打分：
 
 | 测试任务     | 详细样例                                                     | 样例数 | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3 | D7b-4-1 | ChatGPT |
 | ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | -------- | ------- | ------- |
@@ -183,7 +184,7 @@ come soon
 | 数值伦理     | （待评测）                                                   |   --     |      --      |     --       |     --     |   --      |      --   |--
 | 多轮对话     | （待评测）                                                   |   --     |     --       |      --     |     --    |     --    |    --     |
 
-模型在**翻译**、**情感分析**、**阅读理解**、**中文特色**等方面都有不错的表现，甚至在**情感分析**和**中文特色**两类上超过了ChatGPT的表现。
+模型在**翻译**、**情感分析**、**阅读理解**、**中文特色**等方面都有不错的表现。
 
 ## <img src="assets/next.png" style="vertical-align: middle; width: 35px;">  7、下一版更新内容
 
@@ -212,7 +213,7 @@ TODO List：
 ```
 @misc{DreamerGPT,
   author = {Huixuan Chi, Hao Xu, Yuanchen Bei and Danyang Liu},
-  title = {DreamerGPT: xxx},
+  title = {DreamerGPT: Chinese Instruction Tuning},
   year = {2023},
   publisher = {GitHub},
   journal = {GitHub repository},
