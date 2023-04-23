@@ -148,19 +148,19 @@ bash save-generate-2-alpaca-13b-2.sh
 
 评测样例目前共有8类（数值伦理和多伦对话待测评），每一类10个样例，根据GPT 4/ChatGPT进行打分。评测样例见`test_data/`。
 
-| 测试任务     | 详细样例                                                     | 样例数 | 1-alpaca-13b-3-1 | 2-alpaca-13b-2-2 | 2-alpaca-13b-3 |
-| ------------ | ------------------------------------------------------------ | ------ | ---------------- | ---------------- | -------------- |
-| 总平均分     | ---                                                          | 80     |                  |                  |                |
-| 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     |                  |                  |                |
-| 翻译         | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     |                  |                  |                |
-| 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     |                  |                  |                |
-| 情感分析     | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     |                  |                  |                |
-| 阅读理解     | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     |                  |                  |                |
-| 中文特色     | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     |                  |                  |                |
-| 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     |                  |                  |                |
-| 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     |                  |                  |                |
-| 数值伦理     | （待评测）                                                   |        |                  |                  |                |
-| 多轮对话     | （待评测）                                                   |        |                  |                  |                |
+| 测试任务     | 详细样例                                                     | 样例数 | 1-alpaca-13b-3-1 | 2-alpaca-13b-2-2 | 2-alpaca-13b-3 | 4-alpaca-7b-1 | ChatGPT |
+| ------------ | ------------------------------------------------------------ | ------ | ---------------- | ---------------- | -------------- | ------------- | ------- |
+| 总平均分     | ---                                                          | 80     |                  |                  |                |               |         |
+| 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     |                  |                  |                |               |         |
+| 翻译         | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     |                  |                  |                |               |         |
+| 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     |                  |                  |                |               |         |
+| 情感分析     | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     |                  |                  |                |               |         |
+| 阅读理解     | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     |                  |                  |                |               |         |
+| 中文特色     | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     |                  |                  |                |               |         |
+| 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     |                  |                  |                |               |         |
+| 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     |                  |                  |                |               |         |
+| 数值伦理     | （待评测）                                                   |        |                  |                  |                |               |         |
+| 多轮对话     | （待评测）                                                   |        |                  |                  |                |               |         |
 
 
 
