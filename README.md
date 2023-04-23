@@ -164,19 +164,19 @@ bash save-generate-2-alpaca-13b-2.sh
 come soon
 ```
 
-| 测试任务     | 详细样例                                                     | 样例数 | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3  | D7b-4-1   | ChatGPT |
-| ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | --------- | --------- | ------- |
-| 每一项总分   | ---                                                          | 80     | 100        | 100        | 100       | 100       | 100     |
-| 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     | 65         | 64         | 63        | <u>67</u> | **89**  |
-| **翻译**     | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     | 79         | 81         | 82        | <u>89</u> | **91**  |
-| 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     | 65         | <u>73</u>  | 63        | 71        | **92**  |
-| **情感分析** | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     | <u>88</u>  | **91**     | <u>88</u> | 85        | 71      |
-| **阅读理解** | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     | 75         | 77         | 76        | <u>85</u> | **91**  |
-| **中文特色** | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | <u>82</u>  | **83**     | <u>82</u> | 40        | 68      |
-| 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     | 72         | 74         | <u>75</u> | 73        | **96**  |
-| 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     | <u>71</u>  | 70         | 67        | <u>71</u> | **94**  |
-| 数值伦理     | （待评测）                                                   |        |            |            |           |           |         |
-| 多轮对话     | （待评测）                                                   |        |            |            |           |           |         |
+| 测试任务     | 详细样例                                                     | 样例数 | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3 | D7b-4-1 | ChatGPT |
+| ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | -------- | ------- | ------- |
+| 每一项总分   | ---                                                          | 80     | 100        | 100        | 100      | 100     | 100     |
+| 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     | 65         | 64         | 63       | 67*     | **89**  |
+| **翻译**     | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     | 79         | 81         | 82       | 89*     | **91**  |
+| 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     | 65         | 73*        | 63       | 71      | **92**  |
+| **情感分析** | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     | 88*        | **91**     | 88*      | 85      | 71      |
+| **阅读理解** | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     | 75         | 77         | 76       | 85*     | **91**  |
+| **中文特色** | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | 82*        | **83**     | 82*      | 40      | 68      |
+| 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     | 72         | 74         | 75*      | 73      | **96**  |
+| 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     | 71*        | 70         | 67       | 71*     | **94**  |
+| 数值伦理     | （待评测）                                                   |        |            |            |          |         |         |
+| 多轮对话     | （待评测）                                                   |        |            |            |          |         |         |
 
 模型在**翻译**、**情感分析**、**阅读理解**、**中文特色**等方面都有不错的表现，甚至在**情感分析**和**中文特色**两类上超过了ChatGPT的表现。
 
