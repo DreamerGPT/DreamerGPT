@@ -32,6 +32,8 @@
 | D13b-2-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | [Google Drive](https://drive.google.com/file/d/1sM2qNJcz0K43Y-MmhDXvw3hfqOtvzeNI/view?usp=sharing) |
 | D7b-4-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | [Google Drive](https://drive.google.com/file/d/1EAzMpgYA7nQ-9XR4NH4iwAtp83UIH3Bv/view?usp=sharing) |
 
+[测评结果抢先看](#Test)
+
 ## <img src="assets/model.png" style="vertical-align: middle; width: 35px;"> 3、模型和数据准备
 
 ### 3.1 模型
@@ -151,31 +153,41 @@ bash save-generate-2-alpaca-13b-2.sh
 
 ## <img src="assets/test.png" style="vertical-align: middle; width: 35px;"> 6、评测报告
 
-评测样例目前共有8类（数值伦理和多伦对话待测评），每一类10个样例，根据GPT 4/ChatGPT进行打分。评测样例见`test_data/`。
-
-| 测试任务     | 详细样例                                                     | 样例数 | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3 | D7b-4-1 | ChatGPT |
-| ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | -------- | ------- | ------- |
-| 总平均分     | ---                                                          | 80     |            |            |          |         |         |
-| 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     |            |            |          |         |         |
-| 翻译         | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     |            |            |          |         |         |
-| 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     |            |            |          |         |         |
-| 情感分析     | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     |            |            |          |         |         |
-| 阅读理解     | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     |            |            |          |         |         |
-| 中文特色     | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     |            |            |          |         |         |
-| 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     |            |            |          |         |         |
-| 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     |            |            |          |         |         |
-| 数值伦理     | （待评测）                                                   |        |            |            |          |         |         |
-| 多轮对话     | （待评测）                                                   |        |            |            |          |         |         |
+<a name="Test"></a>
 
 
+评测样例目前共有8类测试任务（数值伦理和多伦对话待测评），每一类10个样例，根据GPT 4/ChatGPT进行打分，每个样例打分范围0-10。评测样例见`test_data/`。
+
+测试Prompt：
+
+```python
+come soon
+```
+
+| 测试任务     | 详细样例                                                     | 样例数 | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3  | D7b-4-1   | ChatGPT |
+| ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | --------- | --------- | ------- |
+| 每一项总分   | ---                                                          | 80     | 100        | 100        | 100       | 100       | 100     |
+| 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     | 65         | 64         | 63        | <u>67</u> | **89**  |
+| **翻译**     | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     | 79         | 81         | 82        | <u>89</u> | **91**  |
+| 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     | 65         | <u>73</u>  | 63        | 71        | **92**  |
+| **情感分析** | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     | <u>88</u>  | **91**     | <u>88</u> | 85        | 71      |
+| **阅读理解** | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     | 75         | 77         | 76        | <u>85</u> | **91**  |
+| **中文特色** | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | <u>82</u>  | **83**     | <u>82</u> | 40        | 68      |
+| 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     | 72         | 74         | <u>75</u> | 73        | **96**  |
+| 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     | <u>71</u>  | 70         | 67        | <u>71</u> | **94**  |
+| 数值伦理     | （待评测）                                                   |        |            |            |           |           |         |
+| 多轮对话     | （待评测）                                                   |        |            |            |           |           |         |
+
+模型在**翻译**、**情感分析**、**阅读理解**、**中文特色**等方面都有不错的表现，甚至在**情感分析**和**中文特色**两类上超过了ChatGPT的表现。
 
 ## <img src="assets/next.png" style="vertical-align: middle; width: 35px;">  7、下一版更新内容
 
 TODO List：
 
-- 长文本和对话能力
-- 代码能力
+- 长文本和对话能力有待提升
+- 代码和文本生成能力有待提升
 - 多轮对话cpp开发
+- BLOOM+LoRA
 
 ## <img src="assets/attention.png" style="vertical-align: middle; width: 35px;"> 局限性、使⽤限制与免责声明
 
