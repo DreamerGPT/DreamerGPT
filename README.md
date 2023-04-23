@@ -16,9 +16,16 @@
 
 ## <img src="assets/update.png" style="vertical-align: middle; width: 35px;"> 2、最近更新
 
-[2023/04/23] 正式开源中文Alpaca-LoRA指令精调大模型----**梦想家（DreamerGPT）**，目前提供xxx版本下载体验
+[2023/04/23] 正式开源中文指令精调大模型----**梦想家（DreamerGPT）**，目前提供xxx版本下载体验
 
-已开源模型：
+已有模型（持续增量训练中，更多模型待更新）：
+
+| 模型名称         | 训练数据                                                     | 权重路径                         | 权重下载  |
+| ---------------- | ------------------------------------------------------------ | -------------------------------- | --------- |
+| 1-alpaca-13b-3-1 | Chinese-alpaca-lora-13b-热启动 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-1-alpaca-13b-3-1/` | come soon |
+| 2-alpaca-13b-2-2 | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate | `output/rerun-2-alpaca-13b-2-2/` | come soon |
+| 2-alpaca-13b-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | come soon |
+| 4-alpaca-7b-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | come soon |
 
 ## <img src="assets/model.png" style="vertical-align: middle; width: 35px;"> 3、模型和数据准备
 
@@ -85,13 +92,13 @@ bash merge-13b-alpaca.sh
 - `--lora_model`, chinese-llama/alpaca-lora权重 
 - `--output_dir`, 输出融合权重的路径
 
-### 5.3 指令微调
+### 5.3 指令微调（可选）
 
 以下面的训练流程为例，展示运行的脚本。
 
-| start                                       | f1                 | f2                               | f3            |
-| ------------------------------------------- | ------------------ | -------------------------------- | ------------- |
-| Chinese-alpaca-lora-13b-热启动，实验序号：2 | 数据：流萤-train-0 | 数据：COIG-part1，COIG-translate | 数据：PsyQA-5 |
+| start                                       | f1                    | f2                               | f3            |
+| ------------------------------------------- | --------------------- | -------------------------------- | ------------- |
+| Chinese-alpaca-lora-13b-热启动，实验序号：2 | 数据：firefly-train-0 | 数据：COIG-part1，COIG-translate | 数据：PsyQA-5 |
 
 ```bash
 cd scripts/
@@ -112,6 +119,8 @@ bash rerun-2-alpaca-13b-3.sh
 - 测试集的大小 `--val_set_size 2000` ，如果数据集本身就比较小，可适当减小，比如500， 200
 
 ### 5.4 推理/测评
+
+**注意，如果想直接下载微调好的权重进行推理，那么可以忽略5.3，直接进行5.4。**
 
 比如，我要测评`rerun-2-alpaca-13b-2.sh`微调后的结果：
 
@@ -137,7 +146,23 @@ bash save-generate-2-alpaca-13b-2.sh
 
 ## <img src="assets/test.png" style="vertical-align: middle; width: 35px;"> 6、评测报告
 
-*Coming soon!*
+评测样例目前共有8类（数值伦理和多伦对话待测评），每一类10个样例，根据GPT 4/ChatGPT进行打分。评测样例见`test_data/`。
+
+| 测试任务     | 详细样例                                                     | 样例数 | 1-alpaca-13b-3-1 | 2-alpaca-13b-2-2 | 2-alpaca-13b-3 |
+| ------------ | ------------------------------------------------------------ | ------ | ---------------- | ---------------- | -------------- |
+| 总平均分     | ---                                                          | 80     |                  |                  |                |
+| 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     |                  |                  |                |
+| 翻译         | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     |                  |                  |                |
+| 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     |                  |                  |                |
+| 情感分析     | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     |                  |                  |                |
+| 阅读理解     | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     |                  |                  |                |
+| 中文特色     | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     |                  |                  |                |
+| 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     |                  |                  |                |
+| 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     |                  |                  |                |
+| 数值伦理     | （待评测）                                                   |        |                  |                  |                |
+| 多轮对话     | （待评测）                                                   |        |                  |                  |                |
+
+
 
 ## <img src="assets/next.png" style="vertical-align: middle; width: 35px;">  7、下一版更新内容
 
