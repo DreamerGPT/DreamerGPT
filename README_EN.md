@@ -17,15 +17,19 @@
 
 ---
 
-## <img src="assets/project.png" style="vertical-align: middle; width: 35px;"> 1. Introduction
+## <img src="assets/project.png" style="vertical-align: middle; width: 35px;"> 1. Introduction of DreamerGPT
 
-**DreamerGPT**: A Chinese instruction enhanced large language model.
+**The goal of this project is to promote the application of Chinese large language models in more vertical application fields.**
+
+The following is a 8b quantitative demo. Inference acceleration and performance optimization are also being iterated:
+
+![demo2](./assets/demo2.gif)
 
 ---
 
 ## <img src="assets/update.png" style="vertical-align: middle; width: 35px;"> 2. Recent Updates
 
-**[2023/04/23]** Officially open source of **DreamerGPT**, currently v0.1 has been provided for download experience!
+<img src="assets/new.png" style="vertical-align: middle; width: 20px;">**[2023/04/23]** Officially open source of **DreamerGPT**, currently v0.1 has been provided for download experience!
 
 Existing models (continuous incremental training, more models to be updated in the future):
 
@@ -55,17 +59,22 @@ The data is uniformly pre-processed into the following *json* format:
 }
 ```
 
+### 3.2 Data
 
 Data download links and pre-processing scripts:
 | Data                                                     | Type          |
 | ------------------------------------------------------------ | ---------------- |
 | [Alpaca-GPT4](https://github.com/tloen/alpaca-lora/blob/main/alpaca_data_gpt4.json) | English           |
-| [Firefly (预处理成多份，格式对齐)](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/firefly) | Chinese             |
+| [Firefly](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/firefly) | Chinese             |
 | [COIG](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/COIG) | Chinese, English, code |
-| [PsyQA (预处理成多份，格式对齐)](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/psyQA) | Chinese, psychological counseling    |
+| [PsyQA](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/psyQA) | Chinese, psychological counseling    |
 | [BELLE](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/belle) | Chinese            |
 | [baize](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/baize) | Chinese, dialogue         |
-| [Couplets (预处理成多份，格式对齐)](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/couplets) | Chinese            |
+| [Couplets](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/couplets) | Chinese            |
+
+**NOTE**: The datasets come from the open source community and can be accessed through the link.
+
+---
 
 ## <img src="assets/train.png" style="vertical-align: middle; width: 35px;"> 4. Training
 
@@ -155,6 +164,8 @@ Explanation of the important parameters:
 -  `--test_input_path 'xxx.json' `: the input instruction path.
 - The output results are saved in `test.json` in the corresponding LoRA weight directory by default.
 
+---
+
 ## <img src="assets/test.png" style="vertical-align: middle; width: 35px;"> 6. Test Report
 
 <a name="Test"></a>
@@ -175,7 +186,9 @@ There are currently 8 categories of test tasks for the evaluation samples (numer
 | Numeral Calculations  | (To be evaluted)                                                   |   --     |     --       |     --       |     --    |     --    |     --    |
 | Multiple Rounds of Dialogue   | (To be evaluted)                                                   |   --     |       --     |      --      |    --      |   --      |    --     |
 
-The model has a good performance in **Translation**, **Sentiment Analysis**, **Reading Comprehension**, **Chinese Characteristics**.
+The model has a good performance in **Translation**, **Sentiment Analysis**, **Reading Comprehension**, **Chinese Characteristics**, which outperforms ChatGPT on **Sentiment Analysis** and **Chinese Characteristics** tasks.
+
+---
 
 ## <img src="assets/cite.png" style="vertical-align: middle; width: 35px;"> Citation
 ```
@@ -188,3 +201,11 @@ The model has a good performance in **Translation**, **Sentiment Analysis**, **R
   howpublished = {\url{https://github.com/DreamerGPT/DreamerGPT}},
 }
 ```
+
+---
+
+## <img src="assets/contact.png" style="vertical-align: middle; width: 35px;"> Contact us
+
+There are still many deficiencies in this project, feel free to give us more suggestions, we will try our best to improve this project.
+
+Emails：dreamergpt@gmail.com
