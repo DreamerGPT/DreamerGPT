@@ -25,7 +25,7 @@
 
 以下是基于8b的量化demo，目前推理加速和性能优化也在迭代中：
 
-![demo2](/Users/chihuixuan/myfile/Meituan-Work/MT/workdir/llm/DreamerGPT/assets/demo2.gif)
+![demo2](./assets/demo2.gif)
 
 ---
 
