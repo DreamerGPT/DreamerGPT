@@ -1,6 +1,6 @@
 # <img src="assets/hummingbird.png" style="vertical-align: middle; width: 68px;"> 梦想家 (DreamerGPT)
 
-**Project 梦想家 (DreamerGPT) was found by [迟慧璇](https://github.com/ytchx1999)，[徐灏](https://github.com/KingsleyHsu)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)。**
+**Project 梦想家 (DreamerGPT) was found by 徐灏(kingsleyhsu1@gmail.com)， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)。**
 
 *Read in [English version](README_EN.md)*.
 
@@ -17,7 +17,7 @@
 
 ## <img src="assets/project.png" style="vertical-align: middle; width: 35px;"> 1、项目介绍
 
-中文大模型指令精调。
+中文大模型指令精调。基于[LLaMa7b，13b](https://github.com/facebookresearch/llama)，[Alpaca-LoRA](https://github.com/tloen/alpaca-lora)，基于[Chinese LLaMa](https://github.com/ymcui/Chinese-LLaMA-Alpaca)词表扩充，进一步增量训练。
 
 ## <img src="assets/update.png" style="vertical-align: middle; width: 35px;"> 2、最近更新
 
@@ -32,7 +32,14 @@
 | D13b-2-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | [Google Drive](https://drive.google.com/file/d/1sM2qNJcz0K43Y-MmhDXvw3hfqOtvzeNI/view?usp=sharing) |
 | D7b-4-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | [Google Drive](https://drive.google.com/file/d/1EAzMpgYA7nQ-9XR4NH4iwAtp83UIH3Bv/view?usp=sharing) |
 
-[测评结果抢先看](#Test)
+Demo展示：
+
+<div align=center>
+<img src="assets/test_case_1.jpeg" style="vertical-align: middle; width: 100%;">
+<img src="assets/test_case_2.jpeg" style="vertical-align: middle; width: 100%;">
+<img src="assets/test_case_4.jpeg" style="vertical-align: middle; width: 100%;">
+</div> 
+
 
 ## <img src="assets/model.png" style="vertical-align: middle; width: 35px;"> 3、模型和数据准备
 
@@ -64,6 +71,8 @@
 | [BELLE](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/belle) | 中文             |
 | [baize](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/baize) | 中文对话         |
 | [Couplets (预处理成多份，格式对齐)](https://github.com/DreamerGPT/DreamerGPT/tree/main/data/couplets) | 中文             |
+
+注：数据来源于开源社区，可通过链接访问。
 
 ## <img src="assets/train.png" style="vertical-align: middle; width: 35px;"> 4、训练代码和脚本
 
