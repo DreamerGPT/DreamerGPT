@@ -8,6 +8,8 @@
 <img src="assets/climb.jpg" style="vertical-align: middle; width: 500px;">
 </div> 
 
+![GitHub](https://img.shields.io/github/license/DreamerGPT/DreamerGPT) ![GitHub top language](https://img.shields.io/github/languages/top/DreamerGPT/DreamerGPT) ![GitHub last commit](https://img.shields.io/github/last-commit/DreamerGPT/DreamerGPT)
+
 ----
 
 ## <img src="assets/project.png" style="vertical-align: middle; width: 35px;"> 1、项目介绍
@@ -20,12 +22,12 @@
 
 已有模型（持续增量训练中，更多模型待更新）：
 
-| 模型名称   | 训练数据                                                     | 权重路径                         | 权重下载  |
-| ---------- | ------------------------------------------------------------ | -------------------------------- | --------- |
-| D13b-1-3-1 | Chinese-alpaca-lora-13b-热启动 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-1-alpaca-13b-3-1/` | come soon |
-| D13b-2-2-2 | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate | `output/rerun-2-alpaca-13b-2-2/` | come soon |
-| D13b-2-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | come soon |
-| D7b-4-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | come soon |
+| 模型名称   | 训练数据                                                     | 权重路径                         | 权重下载                                                     |
+| ---------- | ------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------ |
+| D13b-1-3-1 | Chinese-alpaca-lora-13b-热启动 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-1-alpaca-13b-3-1/` | [Google Drive](https://drive.google.com/file/d/1PKT32_IMaHyE2qdt_W40Y6wxk3HVIma-/view?usp=sharing) |
+| D13b-2-2-2 | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate | `output/rerun-2-alpaca-13b-2-2/` | [Google Drive](https://drive.google.com/file/d/1WgzzKbc6IatBiHCcaQA5K74Y8fTEckSs/view?usp=sharing) |
+| D13b-2-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | [Google Drive](https://drive.google.com/file/d/1sM2qNJcz0K43Y-MmhDXvw3hfqOtvzeNI/view?usp=sharing) |
+| D7b-4-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | [Google Drive](https://drive.google.com/file/d/1EAzMpgYA7nQ-9XR4NH4iwAtp83UIH3Bv/view?usp=sharing) |
 
 ## <img src="assets/model.png" style="vertical-align: middle; width: 35px;"> 3、模型和数据准备
 
@@ -166,8 +168,11 @@ bash save-generate-2-alpaca-13b-2.sh
 
 ## <img src="assets/next.png" style="vertical-align: middle; width: 35px;">  7、下一版更新内容
 
-- 长文本数据
-- 多轮对话数据
+TODO List：
+
+- 长文本和对话能力
+- 代码能力
+- 多轮对话cpp开发
 
 ## <img src="assets/attention.png" style="vertical-align: middle; width: 35px;"> 局限性、使⽤限制与免责声明
 
