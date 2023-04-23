@@ -1,6 +1,6 @@
-# <img src="assets/hummingbird.png" style="vertical-align: middle; width: 68px;"> DreamerGPT
+# <img src="assets/hummingbird.png" style="vertical-align: middle; width: 68px;"> DreamerGPT: Chinese Instruction-tuning for Large Language Model.
 
-**The project DreamerGPT was found by [Huixuan Chi](https://github.com/ytchx1999)，[Hao Xu](https://github.com/KingsleyHsu)，[Yuanchen Bei](https://github.com/YuanchenBei)，[Danyang Liu](https://github.com/danyang-liu)。**
+🌱 **DreamerGPT is a project of *Chinese Instruction-tuning for Large Language Model*, found by [Hao Xu](https://github.com/KingsleyHsu), [Huixuan Chi](https://github.com/ytchx1999), [Yuanchen Bei](https://github.com/YuanchenBei) and [Danyang Liu](https://github.com/danyang-liu).**
 
 *👉 Read in [Chinese version](README.md)*.
 
@@ -12,6 +12,7 @@
     <img alt="GitHub" src="https://img.shields.io/github/license/DreamerGPT/DreamerGPT">
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/DreamerGPT/DreamerGPT">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/DreamerGPT/DreamerGPT">
+    <img alt="Stars" src="https://img.shields.io/github/stars/DreamerGPT/DreamerGPT?color=yellow">
 </p>
 
 ---
@@ -175,3 +176,15 @@ There are currently 8 categories of test tasks for the evaluation samples (numer
 | Multiple Rounds of Dialogue   | (To be evaluted)                                                   |   --     |       --     |      --      |    --      |   --      |    --     |
 
 The model has a good performance in **Translation**, **Sentiment Analysis**, **Reading Comprehension**, **Chinese Characteristics**.
+
+## <img src="assets/cite.png" style="vertical-align: middle; width: 35px;"> Citation
+```
+@misc{DreamerGPT,
+  author = {Hao Xu, Huixuan Chi, Yuanchen Bei and Danyang Liu},
+  title = {DreamerGPT: Chinese Instruction-tuning for Large Language Model.},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/DreamerGPT/DreamerGPT}},
+}
+```

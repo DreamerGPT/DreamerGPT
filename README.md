@@ -1,6 +1,6 @@
-# <img src="assets/hummingbird.png" style="vertical-align: middle; width: 68px;"> 梦想家 (DreamerGPT)
+# <img src="assets/hummingbird.png" style="vertical-align: middle; width: 68px;"> 梦想家 (DreamerGPT): 中文大语言模型指令精调
 
-**Project 梦想家 (DreamerGPT) was found by [徐灏](kingsleyhsu1@gmail.com)， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)。**
+🌱 **梦想家 (DreamerGPT) 是由 [徐灏](kingsleyhsu1@gmail.com)， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)发起的中文大语言模型指令精调项目。**
 
 *👉 Read in [English version](README_EN.md)*.
 
@@ -13,7 +13,9 @@
     <img alt="GitHub" src="https://img.shields.io/github/license/DreamerGPT/DreamerGPT">
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/DreamerGPT/DreamerGPT">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/DreamerGPT/DreamerGPT">
+    <img alt="Stars" src="https://img.shields.io/github/stars/DreamerGPT/DreamerGPT?color=yellow">
 </p>
+
 
 ----
 
@@ -21,13 +23,13 @@
 
 本项目的目标是促进中文大语言模型在在更多垂直领域场景的应用。
 
-我们的目标是把大模型做小，帮助每一个人都能训练和在自己的垂直领域拥有一个个性化的专家助手，他可以是心理咨询师，可以是私人助理，也可以是自己的语言家教，也就是说DreamerGPT是一个效果尽可能好，训练代价尽可能低，并在中文上有更多优化的一个语言模型。DreamerGPT项目会持续开放迭代语言模型热启训练（包括LLama、BLoom（coming soon））、指令训练，强化学习、垂直领域精调，也会持续迭代可靠的训练数据和评测目标。由于项目人员和资源有限，目前V0.1版本针对LLama7B和LLama13B在[Chinese LLaMa](https://github.com/ymcui/Chinese-LLaMA-Alpaca)上做优化，增加中文特色、语言对齐等能力。目前在长对话能力和事理逻辑推理上仍有欠缺，更多迭代计划请详见[下一版更新内容](#7、下一版更新内容)。
+我们的目标是把大模型做小，帮助每一个人都能训练和在自己的垂直领域拥有一个个性化的专家助手，他可以是心理咨询师，可以是私人助理，也可以是自己的语言家教，也就是说DreamerGPT是一个效果尽可能好，训练代价尽可能低，并在中文上有更多优化的一个语言模型。DreamerGPT项目会持续开放迭代语言模型热启训练（包括LLama、BLoom（*coming soon*））、指令训练，强化学习、垂直领域精调，也会持续迭代可靠的训练数据和评测目标。由于项目人员和资源有限，目前V0.1版本针对LLama7B和LLama13B在[Chinese LLaMa](https://github.com/ymcui/Chinese-LLaMA-Alpaca)上做优化，增加中文特色、语言对齐等能力。目前在长对话能力和事理逻辑推理上仍有欠缺，更多迭代计划请详见[下一版更新内容](#7、下一版更新内容)。
 
 以下是基于8b的量化demo，目前推理加速和性能优化也在迭代中：
 
 ![demo2](./assets/demo2.gif)
 
-Demo展示：
+*Demo展示：*
 
 <div align=center>
 <img src="assets/test_case_1.jpeg" style="vertical-align: middle; width: 100%;">
@@ -50,6 +52,7 @@ Demo展示：
 | D13b-2-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | [Google Drive](https://drive.google.com/file/d/1sM2qNJcz0K43Y-MmhDXvw3hfqOtvzeNI/view?usp=sharing) |
 | D7b-4-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | [Google Drive](https://drive.google.com/file/d/1EAzMpgYA7nQ-9XR4NH4iwAtp83UIH3Bv/view?usp=sharing) |
 
+---
 
 ## <img src="assets/model.png" style="vertical-align: middle; width: 35px;">3、模型和数据准备
 
@@ -86,6 +89,8 @@ Demo展示：
 
 注：数据来源于开源社区，可通过链接访问。
 
+---
+
 ## <img src="assets/train.png" style="vertical-align: middle; width: 35px;"> 4、训练代码和脚本
 
 代码和脚本介绍：
@@ -94,6 +99,8 @@ Demo展示：
 - `generate.py`：推理/测试代码
 - `scripts/`：运行脚本
   - 比如：`scripts/rerun-2-alpaca-13b-2.sh`，各参数解释见`scripts/README.md`
+
+---
 
 ## <img src="assets/handbook.png" style="vertical-align: middle; width: 35px;"> 5、如何使用
 
@@ -173,6 +180,8 @@ bash save-generate-2-alpaca-13b-2.sh
 -  `--test_input_path 'xxx.json' `：输入的instruction路径
 - 输出结果默认保存在对应LoRA权重目录下的`test.json`中
 
+---
+
 ## <img src="assets/test.png" style="vertical-align: middle; width: 35px;"> 6、评测报告
 
 <a name="Test"></a>
@@ -202,7 +211,11 @@ ChatGPT打分：
 
 模型在**翻译**、**情感分析**、**阅读理解**、**中文特色**等方面都有不错的表现。
 
+
+---
+
 ## <img src="assets/next.png" style="vertical-align: middle; width: 35px;">  7、下一版更新内容
+
 
 TODO List：
 
@@ -211,6 +224,8 @@ TODO List：
 - [ ] 多轮对话app开发
 - [ ] Bloom中文框架
 - [ ] 更宽泛领域的评测体系和方案
+
+---
 
 ## <img src="assets/attention.png" style="vertical-align: middle; width: 35px;"> 局限性、使⽤限制与免责声明
 
@@ -225,12 +240,14 @@ TODO List：
 **基于以上模型的局限性，我们要求本项目的内容及后续用此项目生成的衍生物仅可应用于学术研究目的，不得用于商业用途及对社会造成危害的用途。项目开发者不承担任何因使用本项目（包含但不限于数据、模型、代码等）导致的任何危害、损失或法律责任。**
 
 
+---
+
 ## <img src="assets/cite.png" style="vertical-align: middle; width: 35px;"> 引⽤
 如果您使用本项目的代码、数据或模型，请您引用本项目。
 ```
 @misc{DreamerGPT,
-  author = {Huixuan Chi, Hao Xu, Yuanchen Bei and Danyang Liu},
-  title = {DreamerGPT: Chinese Instruction Tuning},
+  author = {Hao Xu, Huixuan Chi, Yuanchen Bei and Danyang Liu},
+  title = {DreamerGPT: Chinese Instruction-tuning for Large Language Model.},
   year = {2023},
   publisher = {GitHub},
   journal = {GitHub repository},
@@ -238,8 +255,10 @@ TODO List：
 }
 ```
 
+---
+
 ## <img src="assets/contact.png" style="vertical-align: middle; width: 35px;"> 联系我们
 
-本项目仍有很多不足，请大家多提建议和问题，我们会尽力完善本项目的。
+本项目仍有很多不足，请大家多提建议和问题，我们会尽力完善本项目。
 
 邮箱：dreamergpt@gmail.com
