@@ -20,12 +20,12 @@
 
 已有模型（持续增量训练中，更多模型待更新）：
 
-| 模型名称         | 训练数据                                                     | 权重路径                         | 权重下载  |
-| ---------------- | ------------------------------------------------------------ | -------------------------------- | --------- |
-| 1-alpaca-13b-3-1 | Chinese-alpaca-lora-13b-热启动 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-1-alpaca-13b-3-1/` | come soon |
-| 2-alpaca-13b-2-2 | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate | `output/rerun-2-alpaca-13b-2-2/` | come soon |
-| 2-alpaca-13b-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | come soon |
-| 4-alpaca-7b-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | come soon |
+| 模型名称   | 训练数据                                                     | 权重路径                         | 权重下载  |
+| ---------- | ------------------------------------------------------------ | -------------------------------- | --------- |
+| D13b-1-3-1 | Chinese-alpaca-lora-13b-热启动 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-1-alpaca-13b-3-1/` | come soon |
+| D13b-2-2-2 | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate | `output/rerun-2-alpaca-13b-2-2/` | come soon |
+| D13b-2-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | come soon |
+| D7b-4-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | come soon |
 
 ## <img src="assets/model.png" style="vertical-align: middle; width: 35px;"> 3、模型和数据准备
 
@@ -148,19 +148,19 @@ bash save-generate-2-alpaca-13b-2.sh
 
 评测样例目前共有8类（数值伦理和多伦对话待测评），每一类10个样例，根据GPT 4/ChatGPT进行打分。评测样例见`test_data/`。
 
-| 测试任务     | 详细样例                                                     | 样例数 | 1-alpaca-13b-3-1 | 2-alpaca-13b-2-2 | 2-alpaca-13b-3 | 4-alpaca-7b-1 | ChatGPT |
-| ------------ | ------------------------------------------------------------ | ------ | ---------------- | ---------------- | -------------- | ------------- | ------- |
-| 总平均分     | ---                                                          | 80     |                  |                  |                |               |         |
-| 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     |                  |                  |                |               |         |
-| 翻译         | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     |                  |                  |                |               |         |
-| 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     |                  |                  |                |               |         |
-| 情感分析     | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     |                  |                  |                |               |         |
-| 阅读理解     | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     |                  |                  |                |               |         |
-| 中文特色     | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     |                  |                  |                |               |         |
-| 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     |                  |                  |                |               |         |
-| 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     |                  |                  |                |               |         |
-| 数值伦理     | （待评测）                                                   |        |                  |                  |                |               |         |
-| 多轮对话     | （待评测）                                                   |        |                  |                  |                |               |         |
+| 测试任务     | 详细样例                                                     | 样例数 | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3 | D7b-4-1 | ChatGPT |
+| ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | -------- | ------- | ------- |
+| 总平均分     | ---                                                          | 80     |            |            |          |         |         |
+| 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     |            |            |          |         |         |
+| 翻译         | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     |            |            |          |         |         |
+| 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     |            |            |          |         |         |
+| 情感分析     | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     |            |            |          |         |         |
+| 阅读理解     | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     |            |            |          |         |         |
+| 中文特色     | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     |            |            |          |         |         |
+| 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     |            |            |          |         |         |
+| 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     |            |            |          |         |         |
+| 数值伦理     | （待评测）                                                   |        |            |            |          |         |         |
+| 多轮对话     | （待评测）                                                   |        |            |            |          |         |         |
 
 
 
