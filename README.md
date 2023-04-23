@@ -27,6 +27,14 @@
 
 ![demo2](./assets/demo2.gif)
 
+Demo展示：
+
+<div align=center>
+<img src="assets/test_case_1.jpeg" style="vertical-align: middle; width: 100%;">
+<img src="assets/test_case_2.jpeg" style="vertical-align: middle; width: 100%;">
+<img src="assets/test_case_4.jpeg" style="vertical-align: middle; width: 100%;">
+</div> 
+
 ---
 
 ## <img src="assets/update.png" style="vertical-align: middle; width: 35px;"> 2、最近更新
@@ -42,14 +50,8 @@
 | D13b-2-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | [Google Drive](https://drive.google.com/file/d/1sM2qNJcz0K43Y-MmhDXvw3hfqOtvzeNI/view?usp=sharing) |
 | D7b-4-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | [Google Drive](https://drive.google.com/file/d/1EAzMpgYA7nQ-9XR4NH4iwAtp83UIH3Bv/view?usp=sharing) |
 
-Demo展示：
 
-<div align=center>
-<img src="assets/test_case_1.jpeg" style="vertical-align: middle; width: 100%;">
-<img src="assets/test_case_2.jpeg" style="vertical-align: middle; width: 100%;">
-<img src="assets/test_case_4.jpeg" style="vertical-align: middle; width: 100%;">
-</div> 
-## <img src="assets/model.png" style="vertical-align: middle; width: 35px;"> 3、模型和数据准备
+## <img src="assets/model.png" style="vertical-align: middle; width: 35px;">3、模型和数据准备
 
 ### 3.1 模型
 
