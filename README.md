@@ -1,6 +1,6 @@
 # <img src="assets/hummingbird.png" style="vertical-align: middle; width: 68px;"> 梦想家 (DreamerGPT)
 
-**Project 梦想家 (DreamerGPT) was found by 徐灏(kingsleyhsu1@gmail.com)， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)。**
+**Project 梦想家 (DreamerGPT) was found by [徐灏](kingsleyhsu1@gmail.com)， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)。**
 
 *👉 Read in [English version](README_EN.md)*.
 
@@ -8,6 +8,7 @@
 <img src="assets/climb.jpg" style="vertical-align: middle; width: 550px;">
 </div> 
 <br>
+
 <p align="center">
     <img alt="GitHub" src="https://img.shields.io/github/license/DreamerGPT/DreamerGPT">
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/DreamerGPT/DreamerGPT">
@@ -18,7 +19,13 @@
 
 ## <img src="assets/project.png" style="vertical-align: middle; width: 35px;"> 1、项目介绍
 
-中文大模型指令精调。基于[LLaMa7b，13b](https://github.com/facebookresearch/llama)，[Alpaca-LoRA](https://github.com/tloen/alpaca-lora)，基于[Chinese LLaMa](https://github.com/ymcui/Chinese-LLaMA-Alpaca)词表扩充，进一步增量训练。
+本项目的目标是促进中文大语言模型在在更多垂直领域场景的应用。
+
+我们的目标是把大模型做小，帮助每一个人都能训练和在自己的垂直领域拥有一个个性化的专家助手，他可以是心理咨询师，可以是私人助理，也可以是自己的语言家教，也就是说DreamerGPT是一个效果尽可能好，训练代价尽可能低，并在中文上有更多优化的一个语言模型。DreamerGPT项目会持续开放迭代语言模型热启训练（包括LLama、BLoom（coming soon））、指令训练，强化学习、垂直领域精调，也会持续迭代可靠的训练数据和评测目标。由于项目人员和资源有限，目前V0.1版本针对LLama7B和LLama13B在[Chinese LLaMa](https://github.com/ymcui/Chinese-LLaMA-Alpaca)上做优化，增加中文特色、语言对齐等能力。目前在长对话能力和事理逻辑推理上仍有欠缺，更多迭代计划请详见[下一版更新内容](#7、下一版更新内容)。
+
+以下是基于8b的量化demo，目前推理加速和性能优化也在迭代中：
+
+![demo2](/Users/chihuixuan/myfile/Meituan-Work/MT/workdir/llm/DreamerGPT/assets/demo2.gif)
 
 ---
 
@@ -42,8 +49,6 @@ Demo展示：
 <img src="assets/test_case_2.jpeg" style="vertical-align: middle; width: 100%;">
 <img src="assets/test_case_4.jpeg" style="vertical-align: middle; width: 100%;">
 </div> 
-
-
 ## <img src="assets/model.png" style="vertical-align: middle; width: 35px;"> 3、模型和数据准备
 
 ### 3.1 模型
@@ -199,10 +204,11 @@ ChatGPT打分：
 
 TODO List：
 
-- 长文本和对话能力有待提升
-- 代码和文本生成能力有待提升
-- 多轮对话cpp开发
-- BLOOM+LoRA
+- [ ] 长文本和对话能力训练
+- [ ] 代码和文本生成能力
+- [ ] 多轮对话app开发
+- [ ] Bloom中文框架
+- [ ] 更宽泛领域的评测体系和方案
 
 ## <img src="assets/attention.png" style="vertical-align: middle; width: 35px;"> 局限性、使⽤限制与免责声明
 
@@ -231,5 +237,7 @@ TODO List：
 ```
 
 ## <img src="assets/contact.png" style="vertical-align: middle; width: 35px;"> 联系我们
+
+本项目仍有很多不足，请大家多提建议和问题，我们会尽力完善本项目的。
 
 邮箱：dreamergpt@gmail.com
