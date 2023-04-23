@@ -1,6 +1,6 @@
 # <img src="assets/hummingbird.png" style="vertical-align: middle; width: 68px;"> 梦想家 (DreamerGPT): 中文大语言模型指令精调
 
-🌱 **梦想家 (DreamerGPT) 是由 [徐灏](kingsleyhsu1@gmail.com)， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)发起的中文大语言模型指令精调项目。**
+🌱 **梦想家 (DreamerGPT) 是由[徐灏](kingsleyhsu1@gmail.com)， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)发起的中文大语言模型指令精调项目。**
 
 *👉 Read in [English version](README_EN.md)*.
 
@@ -21,7 +21,7 @@
 
 ## <img src="assets/project.png" style="vertical-align: middle; width: 35px;"> 1、项目介绍
 
-本项目的目标是促进中文大语言模型在在更多垂直领域场景的应用。
+**本项目的目标是促进中文大语言模型在在更多垂直领域场景的应用。**
 
 我们的目标是把大模型做小，帮助每一个人都能训练和在自己的垂直领域拥有一个个性化的专家助手，他可以是心理咨询师，可以是私人助理，也可以是自己的语言家教，也就是说DreamerGPT是一个效果尽可能好，训练代价尽可能低，并在中文上有更多优化的一个语言模型。DreamerGPT项目会持续开放迭代语言模型热启训练（包括LLama、BLoom（*coming soon*））、指令训练，强化学习、垂直领域精调，也会持续迭代可靠的训练数据和评测目标。由于项目人员和资源有限，目前V0.1版本针对LLama7B和LLama13B在[Chinese LLaMa](https://github.com/ymcui/Chinese-LLaMA-Alpaca)上做优化，增加中文特色、语言对齐等能力。目前在长对话能力和事理逻辑推理上仍有欠缺，更多迭代计划请详见[下一版更新内容](#7、下一版更新内容)。
 
@@ -41,7 +41,7 @@
 
 ## <img src="assets/update.png" style="vertical-align: middle; width: 35px;"> 2、最近更新
 
-**[2023/04/23]** 正式开源中文指令精调大模型----**梦想家（DreamerGPT）**，目前提供v0.1版本下载体验
+<img src="assets/new.png" style="vertical-align: middle; width: 20px;">**[2023/04/23]** 正式开源中文指令精调大模型----**梦想家（DreamerGPT）**，目前提供v0.1版本下载体验
 
 已有模型（持续增量训练中，更多模型待更新）：
 
