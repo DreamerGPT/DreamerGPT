@@ -2,11 +2,12 @@
 
 **Project 梦想家 (DreamerGPT) was found by 徐灏(kingsleyhsu1@gmail.com)， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)。**
 
-*Read in [English version](README_EN.md)*.
+*👉 Read in [English version](README_EN.md)*.
 
 <div align=center>
-<img src="assets/climb.jpg" style="vertical-align: middle; width: 500px;">
+<img src="assets/climb.jpg" style="vertical-align: middle; width: 550px;">
 </div> 
+<br>
 <p align="center">
     <img alt="GitHub" src="https://img.shields.io/github/license/DreamerGPT/DreamerGPT">
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/DreamerGPT/DreamerGPT">
@@ -19,9 +20,11 @@
 
 中文大模型指令精调。基于[LLaMa7b，13b](https://github.com/facebookresearch/llama)，[Alpaca-LoRA](https://github.com/tloen/alpaca-lora)，基于[Chinese LLaMa](https://github.com/ymcui/Chinese-LLaMA-Alpaca)词表扩充，进一步增量训练。
 
+---
+
 ## <img src="assets/update.png" style="vertical-align: middle; width: 35px;"> 2、最近更新
 
-[2023/04/23] 正式开源中文指令精调大模型----**梦想家（DreamerGPT）**，目前提供xxx版本下载体验
+**[2023/04/23]** 正式开源中文指令精调大模型----**梦想家（DreamerGPT）**，目前提供v0.1版本下载体验
 
 已有模型（持续增量训练中，更多模型待更新）：
 
@@ -52,7 +55,7 @@ Demo展示：
 
 ### 3.2 数据
 
-数据下载以及预处理脚本。统一处理成以下json格式：
+数据统一处理成以下的json格式：
 
 ```bash
 {
@@ -61,6 +64,8 @@ Demo展示：
     "output": "..."
 }
 ```
+
+数据下载以及预处理脚本:
 
 | 数据                                                         | 类型             |
 | ------------------------------------------------------------ | ---------------- |
@@ -130,7 +135,8 @@ bash rerun-2-alpaca-13b-3.sh
 重要参数解释（请自行修改相关路径）：
 
 - 基础路径信息请参考[Alpaca-LoRA](https://github.com/tloen/alpaca-lora)。
-- rerun的脚本自己写的时候注意加上 `--resume_from_checkpoint '前一次执行的LoRA权重路径’`
+- rerun的脚本自己写的时候注意加上。
+- `--resume_from_checkpoint '前一次执行的LoRA权重路径'`
 - 不需要inputs loss，修改 `--train_on_inputs False`
 - 测试集的大小 `--val_set_size 2000` ，如果数据集本身就比较小，可适当减小，比如500， 200
 
@@ -164,8 +170,7 @@ bash save-generate-2-alpaca-13b-2.sh
 
 <a name="Test"></a>
 
-
-评测样例目前共有8类测试任务（数值伦理和多伦对话待测评），每一类10个样例，根据GPT 4/ChatGPT进行打分，每个样例打分范围0-10。评测样例见`test_data/`。
+评测样例目前共有8类测试任务（数值伦理和多伦对话待测评），每一类10个样例，根据GPT-4/ChatGPT进行打分，每个样例打分范围0-10。评测样例见`test_data/`。
 
 测试Prompt：
 
@@ -185,8 +190,8 @@ ChatGPT打分：
 | **中文特色** | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | 82*        | **83**     | 82*      | 40      | 68      |
 | 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     | 72         | 74         | 75*      | 73      | **96**  |
 | 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     | 71*        | 70         | 67       | 71*     | **94**  |
-| 数值伦理     | （待评测）                                                   |        |            |            |          |         |         |
-| 多轮对话     | （待评测）                                                   |        |            |            |          |         |         |
+| 数值伦理     | （待评测）                                                   |   --     |      --      |     --       |     --     |   --      |      --   |--
+| 多轮对话     | （待评测）                                                   |   --     |     --       |      --     |     --    |     --    |    --     |
 
 模型在**翻译**、**情感分析**、**阅读理解**、**中文特色**等方面都有不错的表现。
 
