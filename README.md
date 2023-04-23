@@ -7,8 +7,11 @@
 <div align=center>
 <img src="assets/climb.jpg" style="vertical-align: middle; width: 500px;">
 </div> 
-
-![GitHub](https://img.shields.io/github/license/DreamerGPT/DreamerGPT) ![GitHub top language](https://img.shields.io/github/languages/top/DreamerGPT/DreamerGPT) ![GitHub last commit](https://img.shields.io/github/last-commit/DreamerGPT/DreamerGPT)
+<p align="center">
+    <img alt="GitHub" src="https://img.shields.io/github/license/DreamerGPT/DreamerGPT">
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/DreamerGPT/DreamerGPT">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/DreamerGPT/DreamerGPT">
+</p>
 
 ----
 
