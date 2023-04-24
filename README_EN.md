@@ -119,7 +119,7 @@ Take the following training process as an example to show the running script.
 
 | start                                       | f1                    | f2                               | f3            |
 | ------------------------------------------- | --------------------- | -------------------------------- | ------------- |
-| Chinese-alpaca-lora-13b-热启动, Experiment ID: 2 | Data：firefly-train-0 | Data：COIG-part1，COIG-translate | Data：PsyQA-5 |
+| Chinese-alpaca-lora-13b-热启动 | Data：firefly-train-0 | Data：COIG-part1，COIG-translate | Data：PsyQA-5 |
 
 ```bash
 cd scripts/
@@ -186,7 +186,7 @@ There are currently 8 categories of test tasks for the evaluation samples (numer
 | Numeral Calculations  | (To be evaluted)                                                   |   --     |     --       |     --       |     --    |     --    |     --    |
 | Multiple Rounds of Dialogue   | (To be evaluted)                                                   |   --     |       --     |      --      |    --      |   --      |    --     |
 
-The model has a good performance in **Translation**, **Sentiment Analysis**, **Reading Comprehension**, **Chinese Characteristics**, which outperforms ChatGPT on **Sentiment Analysis** and **Chinese Characteristics** tasks.
+The model has a good performance in **Translation**, **Sentiment Analysis**, **Reading Comprehension**, **Chinese Characteristics**.
 
 ---
 
