@@ -219,7 +219,7 @@ System5:xxxx。
 | 中文特色     | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | 69*        | 69*        | 69*      | 43      | **86**   |
 | 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     | 62*        | 62*        | 62*      | 57      | **96**   |
 | 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     | 87*        | 87*        | 87*      | 71      | **95.5** |
-| 数值伦理     | （待评测）                                                   | --     | --         | --         | --       | --      | --       |
+| 数学推理     | （待评测）                                                   | --     | --         | --         | --       | --      | --       |
 | 多轮对话     | （待评测）                                                   | --     | --         | --         | --       | --      | --       |
 
 ### 6.3 GPT-3.5打分
@@ -235,7 +235,7 @@ System5:xxxx。
 | 中文特色 | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | 82*        | **83**     | 82*      | 40      | 68      |
 | 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     | 72         | 74         | 75*      | 73      | **96**  |
 | 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     | 71*        | 70         | 67       | 71*     | **94**  |
-| 数值伦理     | （待评测）                                                   |   --     |      --      |     --       |     --     |   --      |      --   |
+| 数学推理  | （待评测）                                                   |   --     |      --      |     --       |     --     |   --      |      --   |
 | 多轮对话     | （待评测）                                                   |   --     |     --       |      --     |     --    |     --    |    --     |
 
 总体开看，模型在**翻译**、**情感分析**、**阅读理解**等方面都有不错的表现。
