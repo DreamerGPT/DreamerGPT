@@ -1,6 +1,6 @@
 # <img src="assets/hummingbird.png" style="vertical-align: middle; width: 68px;"> 梦想家 (DreamerGPT): 中文大语言模型指令精调
 
-🌱 **梦想家 (DreamerGPT) 是由[徐灏](kingsleyhsu1@gmail.com)， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)发起的中文大语言模型指令精调项目。**
+🌱 **梦想家 (DreamerGPT) 是由<a href="mailto:kingsleyhsu1@gmail.com">徐灏</a>， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)发起的中文大语言模型指令精调项目。**
 
 *👉 Read in [English version](README_EN.md)*.
 
