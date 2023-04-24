@@ -194,7 +194,7 @@ bash save-generate-2-alpaca-13b-2.sh
 
 ### 6.1 测试Prompt：
 
-```json
+```bash
 以下是五个类似 ChatGPT 的系统的输出。请以 10 分制为每一项打分，并给出解释以证明您的分数。输出结果格式为：System 分数；System 解释。
 Prompt:xxxx。
 答案：
