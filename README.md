@@ -192,7 +192,7 @@ bash save-generate-2-alpaca-13b-2.sh
 
 评测样例目前共有8类测试任务（数值伦理和多伦对话待测评），每一类10个样例，根据调用GPT-4/GPT 3.5的接口进行打分，每个样例打分范围0-10。评测样例见`test_data/`。
 
-### 6.1 测试Prompt：
+### 6.1 测试Prompt
 
 ```bash
 以下是五个类似 ChatGPT 的系统的输出。请以 10 分制为每一项打分，并给出解释以证明您的分数。输出结果格式为：System 分数；System 解释。
@@ -204,27 +204,41 @@ System3:xxxx。
 System4:xxxx。
 System5:xxxx。
 ```
-### 6.2 GPT 3.5打分：
+### 6.2 GPT-4打分
+
+注：打分仅供参考，（相比GPT 3.5）GPT 4的打分更加准确，参考性更强。
+
+| 测试任务     | 详细样例                                                     | 样例数 | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3 | D7b-4-1 | ChatGPT  |
+| ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | -------- | ------- | -------- |
+| 每一项总分   | ---                                                          | 80     | 100        | 100        | 100      | 100     | 100      |
+| 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     | 80*        | 78         | 78       | 68      | **95**   |
+| 翻译         | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     | 77*        | 77*        | 77*      | 64      | **86**   |
+| 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     | 56         | 65*        | 55       | 61      | **91**   |
+| 情感分析     | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     | **91**     | **91**     | **91**   | 88*     | 88*      |
+| 阅读理解     | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     | 74*        | 74*        | 74*      | 76.5    | **96.5** |
+| 中文特色     | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | 69*        | 69*        | 69*      | 43      | **86**   |
+| 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     | 62*        | 62*        | 62*      | 57      | **96**   |
+| 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     | 87*        | 87*        | 87*      | 71      | **95.5** |
+| 数值伦理     | （待评测）                                                   | --     | --         | --         | --       | --      | --       |
+| 多轮对话     | （待评测）                                                   | --     | --         | --         | --       | --      | --       |
+
+### 6.3 GPT-3.5打分
 
 | 测试任务     | 详细样例                                                     | 样例数 | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3 | D7b-4-1 | ChatGPT |
 | ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | -------- | ------- | ------- |
 | 每一项总分   | ---                                                          | 80     | 100        | 100        | 100      | 100     | 100     |
 | 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     | 65         | 64         | 63       | 67*     | **89**  |
-| **翻译**     | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     | 79         | 81         | 82       | 89*     | **91**  |
+| 翻译     | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     | 79         | 81         | 82       | 89*     | **91**  |
 | 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     | 65         | 73*        | 63       | 71      | **92**  |
-| **情感分析** | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     | 88*        | **91**     | 88*      | 85      | 71      |
-| **阅读理解** | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     | 75         | 77         | 76       | 85*     | **91**  |
-| **中文特色** | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | 82*        | **83**     | 82*      | 40      | 68      |
+| 情感分析 | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     | 88*        | **91**     | 88*      | 85      | 71      |
+| 阅读理解 | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     | 75         | 77         | 76       | 85*     | **91**  |
+| 中文特色 | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | 82*        | **83**     | 82*      | 40      | 68      |
 | 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     | 72         | 74         | 75*      | 73      | **96**  |
 | 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     | 71*        | 70         | 67       | 71*     | **94**  |
-| 数值伦理     | （待评测）                                                   |   --     |      --      |     --       |     --     |   --      |      --   |--
+| 数值伦理     | （待评测）                                                   |   --     |      --      |     --       |     --     |   --      |      --   |
 | 多轮对话     | （待评测）                                                   |   --     |     --       |      --     |     --    |     --    |    --     |
 
-模型在**翻译**、**情感分析**、**阅读理解**、**中文特色**等方面都有不错的表现。
-
-### 6.3 GPT 4打分
-
-coming soon.
+总体开看，模型在**翻译**、**情感分析**、**阅读理解**等方面都有不错的表现。
 
 
 ---
