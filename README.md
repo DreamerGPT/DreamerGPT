@@ -47,10 +47,14 @@
 
 | 模型名称   | 训练数据                                                     | 权重路径                         | 权重下载                                                     |
 | ---------- | ------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------ |
-| D13b-1-3-1 | Chinese-alpaca-lora-13b-热启动 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-1-alpaca-13b-3-1/` | [Google Drive](https://drive.google.com/file/d/1PKT32_IMaHyE2qdt_W40Y6wxk3HVIma-/view?usp=sharing) |
-| D13b-2-2-2 | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate | `output/rerun-2-alpaca-13b-2-2/` | [Google Drive](https://drive.google.com/file/d/1WgzzKbc6IatBiHCcaQA5K74Y8fTEckSs/view?usp=sharing) |
-| D13b-2-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | [Google Drive](https://drive.google.com/file/d/1sM2qNJcz0K43Y-MmhDXvw3hfqOtvzeNI/view?usp=sharing) |
-| D7b-4-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | [Google Drive](https://drive.google.com/file/d/1EAzMpgYA7nQ-9XR4NH4iwAtp83UIH3Bv/view?usp=sharing) |
+| D13b-1-3-1 | Chinese-alpaca-lora-13b-热启动 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-1-alpaca-13b-3-1/` | [[Google Drive](https://drive.google.com/file/d/1PKT32_IMaHyE2qdt_W40Y6wxk3HVIma-/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D13b-1-3-1/tree/main)] |
+| D13b-2-2-2 | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate | `output/rerun-2-alpaca-13b-2-2/` | [[Google Drive](https://drive.google.com/file/d/1WgzzKbc6IatBiHCcaQA5K74Y8fTEckSs/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D13b-2-2-2/tree/main)] |
+| D13b-2-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | [[Google Drive](https://drive.google.com/file/d/1sM2qNJcz0K43Y-MmhDXvw3hfqOtvzeNI/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D13b-2-3/tree/main)] |
+| D7b-4-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | [[Google Drive](https://drive.google.com/file/d/1EAzMpgYA7nQ-9XR4NH4iwAtp83UIH3Bv/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D7b-4-1/tree/main)] |
+
+[模型测评抢先看](#Test)
+
+
 
 ---
 
@@ -186,14 +190,21 @@ bash save-generate-2-alpaca-13b-2.sh
 
 <a name="Test"></a>
 
-评测样例目前共有8类测试任务（数值伦理和多伦对话待测评），每一类10个样例，根据GPT-4/ChatGPT进行打分，每个样例打分范围0-10。评测样例见`test_data/`。
+评测样例目前共有8类测试任务（数值伦理和多伦对话待测评），每一类10个样例，根据调用GPT-4/GPT 3.5的接口进行打分，每个样例打分范围0-10。评测样例见`test_data/`。
 
-测试Prompt：
+### 6.1 测试Prompt：
 
-```python
-come soon
+```json
+以下是五个类似 ChatGPT 的系统的输出。请以 10 分制为每一项打分，并给出解释以证明您的分数。输出结果格式为：System 分数；System 解释。
+Prompt:xxxx。
+答案：
+System1:xxxx。
+System2:xxxx。
+System3:xxxx。
+System4:xxxx。
+System5:xxxx。
 ```
-ChatGPT打分：
+### 6.2 GPT 3.5打分：
 
 | 测试任务     | 详细样例                                                     | 样例数 | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3 | D7b-4-1 | ChatGPT |
 | ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | -------- | ------- | ------- |
@@ -209,7 +220,11 @@ ChatGPT打分：
 | 数值伦理     | （待评测）                                                   |   --     |      --      |     --       |     --     |   --      |      --   |--
 | 多轮对话     | （待评测）                                                   |   --     |     --       |      --     |     --    |     --    |    --     |
 
-模型在**翻译**、**情感分析**、**阅读理解**、**中文特色**等方面都有不错的表现，甚至在**情感分析**和**中文特色**任务上的表现超过了ChatGPT。
+模型在**翻译**、**情感分析**、**阅读理解**、**中文特色**等方面都有不错的表现。
+
+### 6.3 GPT 4打分
+
+coming soon.
 
 
 ---
