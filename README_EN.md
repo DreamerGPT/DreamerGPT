@@ -170,23 +170,54 @@ Explanation of the important parameters:
 
 <a name="Test"></a>
 
-There are currently 8 categories of test tasks for the evaluation samples (numerical ethics and Duolun Dialogue to be evaluated), with 10 samples in each category, and are scored according to GPT-4/ChatGPT, and the scoring range for each sample is 0-10. See `test_data/` for evaluation samples.
+There are currently 8 categories of test tasks for the evaluation samples (numerical ethics and Duolun Dialogue to be evaluated), with 10 samples in each category, and are scored according to GPT3.5/GPT-4, and the scoring range for each sample is 0-10. See `test_data/` for evaluation samples.
+
+### 6.1 Testing Prompt
+```
+Below are the outputs of five ChatGPT-like systems. Please rate each item on a 10-point scale and provide an explanation to justify your score. The output format is: System score; System explanation.
+Prompt:xxxx.
+Answer:
+System1:xxxx.
+System2:xxxx.
+System3:xxxx.
+System4:xxxx.
+System5:xxxx.
+```
+
+### 6.2 Scoring by GPT-4
+**NOTE**: Scoring is for reference only. From the evalution results, GPT-4's scoring is more accurate compared with GPT-3.5.
+
+| Test Task     | Detail Samples                               | Number of samples | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3 | D7b-4-1 | ChatGPT  |
+| ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | -------- | ------- | -------- |
+| Total score for each  category  | ---                                                          | 80     | 100        | 100        | 100      | 100     | 100      |
+| Quiz     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     | 80*        | 78         | 78       | 68      | **95**   |
+| Translation     | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     | 77*        | 77*        | 77*      | 64      | **86**   |
+| Text Generation  | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     | 56         | 65*        | 55       | 61      | **91**   |
+| Sentiment Analysis     | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     | **91**     | **91**     | **91**   | 88*     | 88*      |
+| Reading Comprehension   | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     | 74*        | 74*        | 74*      | 76.5    | **96.5** |
+| Chinese Characteristics   | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | 69*        | 69*        | 69*      | 43      | **86**   |
+| Code Generation  | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     | 62*        | 62*        | 62*      | 57      | **96**   |
+| Ethics & Refusal | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     | 87*        | 87*        | 87*      | 71      | **95.5** |
+| Mathematical Calculations   | (To be evaluted)                                                  | --     | --         | --         | --       | --      | --       |
+| Multi-rounds Dialogue    | (To be evaluted)                                   | --     | --         | --         | --       | --      | --       |
+
+### 6.3 Scoring by GPT-3.5
 
 | Test Task     | Detail Samples                                 | Number of samples | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3 | D7b-4-1 | ChatGPT |
 | ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | -------- | ------- | ------- |
 | Total score for each  category  | ---                                                          | 80     | 100        | 100        | 100      | 100     | 100     |
 | Quiz     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     | 65         | 64         | 63       | 67*     | **89**  |
-| **Translation**     | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     | 79         | 81         | 82       | 89*     | **91**  |
+| Translation     | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     | 79         | 81         | 82       | 89*     | **91**  |
 | Text Generation    | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     | 65         | 73*        | 63       | 71      | **92**  |
-| **Sentiment Analysis** | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     | 88*        | **91**     | 88*      | 85      | 71      |
-| **Reading Comprehension** | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     | 75         | 77         | 76       | 85*     | **91**  |
-| **Chinese Characteristics** | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | 82*        | **83**     | 82*      | 40      | 68      |
+| Sentiment Analysis | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     | 88*        | **91**     | 88*      | 85      | 71      |
+| Reading Comprehension | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     | 75         | 77         | 76       | 85*     | **91**  |
+| Chinese Characteristics | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | 82*        | **83**     | 82*      | 40      | 68      |
 | Code Generation     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     | 72         | 74         | 75*      | 73      | **96**  |
 | Ethics & Refusal | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     | 71*        | 70         | 67       | 71*     | **94**  |
-| Numeral Calculations  | (To be evaluted)                                                   |   --     |     --       |     --       |     --    |     --    |     --    |
-| Multiple Rounds of Dialogue   | (To be evaluted)                                                   |   --     |       --     |      --      |    --      |   --      |    --     |
+| Mathematical Calculations  | (To be evaluted)                                                   |   --     |     --       |     --       |     --    |     --    |     --    |
+| Multi-rounds Dialogue   | (To be evaluted)                                                   |   --     |       --     |      --      |    --      |   --      |    --     |
 
-The model has a good performance in **Translation**, **Sentiment Analysis**, **Reading Comprehension**, **Chinese Characteristics**.
+Generally, the model has a good performance in **Translation**, **Sentiment Analysis**, and **Reading Comprehension**.
 
 ---
 
