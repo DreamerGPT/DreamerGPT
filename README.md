@@ -190,7 +190,7 @@ bash save-generate-2-alpaca-13b-2.sh
 
 <a name="Test"></a>
 
-评测样例目前共有8类测试任务（数值伦理和多伦对话待测评），每一类10个样例，根据调用GPT-4/GPT 3.5的接口进行打分，每个样例打分范围0-10。评测样例见`test_data/`。
+评测样例目前共有8类测试任务（数值伦理和多伦对话待测评），每一类10个样例，根据调用GPT-4/GPT 3.5的接口对**8-bit量化的版本**进行打分（非量化版本分数更高），每个样例打分范围0-10。评测样例见`test_data/`。
 
 ### 6.1 测试Prompt
 
@@ -239,6 +239,26 @@ System5:xxxx。
 | 多轮对话     | （待评测）                                                   |   --     |     --       |      --     |     --    |     --    |    --     |
 
 总体开看，模型在**翻译**、**情感分析**、**阅读理解**等方面都有不错的表现。
+
+### 6.4 人工打分
+
+两个人手工打分后取平均值。
+
+| 测试任务     | 详细样例                                                     | 样例数 | D13b-1-3-1 | D13b-2-2-2 | D13b-2-3 | D7b-4-1 | ChatGPT   |
+| ------------ | ------------------------------------------------------------ | ------ | ---------- | ---------- | -------- | ------- | --------- |
+| 每一项总分   | ---                                                          | 80     | 100        | 100        | 100      | 100     | 100       |
+| 知识问答     | [01qa.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/01qa.json) | 10     | 83*        | 82         | 82       | 69.75   | **96.25** |
+| 翻译         | [02translate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/02translate.json) | 10     | 76.5*      | 76.5*      | 76.5*    | 62.5    | **84**    |
+| 文本生成     | [03generate.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/03generate.json) | 10     | 44         | 51.5*      | 43       | 47      | **81.5**  |
+| 情感分析     | [04analyse.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/04analyse.json) | 10     | 89*        | 89*        | 89*      | 85.5    | **91**    |
+| 阅读理解     | [05understanding.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/05understanding.json) | 10     | 69*        | 69*        | 69*      | 75.75   | **96**    |
+| 中文特色     | [06chinese.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/06chinese.json) | 10     | 55*        | 55*        | 55*      | 37.5    | **87.5**  |
+| 代码生成     | [07code.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/07code.json) | 10     | 61.5*      | 61.5*      | 61.5*    | 57      | **88.5**  |
+| 伦理、拒答类 | [08alignment.json](https://github.com/DreamerGPT/DreamerGPT/blob/main/test_data/08alignment.json) | 10     | 84*        | 84*        | 84*      | 70      | **95.5**  |
+| 数值伦理     | （待评测）                                                   | --     | --         | --         | --       | --      | --        |
+| 多轮对话     | （待评测）                                                   | --     | --         | --         | --       | --      | --        |
+
+
 
 
 ---
