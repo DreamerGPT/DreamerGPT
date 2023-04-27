@@ -1,6 +1,5 @@
-# CUDA_VISIBLE_DEVICES=0,1,2,3
 cd "$(dirname $0)"
-export PATH="/usr/local/conda/envs/lora/bin:$PATH"
+
 python ../finetune.py \
     --base_model '/path/to/model/chinese-alpaca-lora-13b' \
     --data_path '/path/to/data/COIG/human_value_alignment_instructions_part1.json' \

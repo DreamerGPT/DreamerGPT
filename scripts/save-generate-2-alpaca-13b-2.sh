@@ -1,6 +1,4 @@
-CUDA_VISIBLE_DEVICES=0
 cd "$(dirname $0)"
-export PATH="/usr/local/conda/envs/lora/bin:$PATH"
 
 python ../generate.py \
     --gpu_id 2 \
