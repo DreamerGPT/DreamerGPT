@@ -2,9 +2,9 @@
 cd "$(dirname $0)"
 export PATH="/usr/local/conda/envs/lora/bin:$PATH"
 python ../finetune.py \
-    --base_model '/mnt/dolphinfs/hdd_pool/docker/user/hadoop-aipnlp/chihuixuan/llm/data/chinese-alpaca-lora-13b' \
-    --data_path '/mnt/dolphinfs/hdd_pool/docker/user/hadoop-aipnlp/chihuixuan/DATA4HOPE/alpaca-lora/COIG/translated_instructions.jsonl' \
-    --output_dir '/mnt/dolphinfs/hdd_pool/docker/user/hadoop-aipnlp/chihuixuan/llm/output/rerun-2-alpaca-13b-2-2' \
+    --base_model '/path/to/model/chinese-alpaca-lora-13b' \
+    --data_path '/path/to/data/COIG/translated_instructions.jsonl' \
+    --output_dir '/path/to/output/rerun-2-alpaca-13b-2-2' \
     --batch_size 256 \
     --micro_batch_size 8 \
     --num_epochs 3 \
@@ -17,4 +17,4 @@ python ../finetune.py \
     --lora_target_modules '[q_proj,v_proj]' \
     --train_on_inputs \
     --group_by_length \
-    --resume_from_checkpoint '/mnt/dolphinfs/hdd_pool/docker/user/hadoop-aipnlp/chihuixuan/llm/output/rerun-2-alpaca-13b-2'
+    --resume_from_checkpoint '/path/to/output/rerun-2-alpaca-13b-2'

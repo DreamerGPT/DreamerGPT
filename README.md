@@ -64,8 +64,8 @@
 
 模型权重下载：
 
-- [llama原始权重](https://github.com/facebookresearch/llama) 
-- [chinese-llama/alpaca-lora权重](https://github.com/ymcui/Chinese-LLaMA-Alpaca)
+- [llama-13b原始权重](https://huggingface.co/decapoda-research/llama-13b-hf/tree/main) 
+- [chinese-llama/alpaca-lora-13b权重](https://huggingface.co/ziqingyang/chinese-alpaca-lora-13b/tree/main)
 
 ### 3.2 数据
 
