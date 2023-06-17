@@ -1,6 +1,6 @@
 # <img src="assets/hummingbird.png" style="vertical-align: middle; width: 68px;"> 梦想家 (DreamerGPT): 中文大语言模型指令精调
 
-🌱 **梦想家 (DreamerGPT) 是由<a href="mailto:kingsleyhsu1@gmail.com">徐灏</a>， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu)发起的中文大语言模型指令精调项目。**
+🌱 **梦想家 (DreamerGPT) 是由 <a href="mailto:kingsleyhsu1@gmail.com">徐灏</a>， [迟慧璇](https://github.com/ytchx1999)，[贝元琛](https://github.com/YuanchenBei)，[刘丹阳](https://github.com/danyang-liu) 发起的中文大语言模型指令精调项目。**
 
 *👉 Read in [English version](README_EN.md)*.
 
@@ -23,34 +23,43 @@
 
 **本项目的目标是促进中文大语言模型在在更多垂直领域场景的应用。**
 
-我们的目标是把大模型做小，帮助每一个人都能训练和在自己的垂直领域拥有一个个性化的专家助手，他可以是心理咨询师，可以是私人助理，也可以是自己的语言家教，也就是说DreamerGPT是一个效果尽可能好，训练代价尽可能低，并在中文上有更多优化的一个语言模型。DreamerGPT项目会持续开放迭代语言模型热启训练（包括LLama、BLoom（*coming soon*））、指令训练，强化学习、垂直领域精调，也会持续迭代可靠的训练数据和评测目标。由于项目人员和资源有限，目前V0.1版本针对LLama7B和LLama13B在[Chinese LLaMa](https://github.com/ymcui/Chinese-LLaMA-Alpaca)上做优化，增加中文特色、语言对齐等能力。目前在长对话能力和事理逻辑推理上仍有欠缺，更多迭代计划请详见[下一版更新内容](#7、下一版更新内容)。
+我们的目标是把大模型做小，帮助每一个人都能训练和在自己的垂直领域拥有一个个性化的专家助手，他可以是心理咨询师，可以是代码助手，可以是私人助理，也可以是自己的语言家教，也就是说DreamerGPT是一个效果尽可能好，训练代价尽可能低，并在中文上有更多优化的一个语言模型。DreamerGPT项目会持续开放迭代语言模型热启训练（包括LLaMa、BLOOM）、指令训练，强化学习、垂直领域精调，也会持续迭代可靠的训练数据和评测目标。由于项目人员和资源有限，目前V0.1版本针对LLaMa-7B和LLaMa-13B在[Chinese LLaMa](https://github.com/ymcui/Chinese-LLaMA-Alpaca)上做优化，增加中文特色、语言对齐等能力。目前在长对话能力和事理逻辑推理上仍有欠缺，更多迭代计划请详见[下一版更新内容](#7、下一版更新内容)。
 
-以下是基于8b的量化demo，目前推理加速和性能优化也在迭代中：
+以下是基于8b的量化demo（视频未加速），目前推理加速和性能优化也在迭代中：
 
 ![demo2](./assets/demo2.gif)
 
-*Demo展示：*
+更多Demo展示：
 
+<details>
 <div align=center>
 <img src="assets/test_case_1.jpeg" style="vertical-align: middle; width: 100%;">
 <img src="assets/test_case_2.jpeg" style="vertical-align: middle; width: 100%;">
 <img src="assets/test_case_4.jpeg" style="vertical-align: middle; width: 100%;">
 </div> 
+</details>
+
 
 ---
 
 ## <img src="assets/update.png" style="vertical-align: middle; width: 35px;"> 2、最近更新
 
-<img src="assets/new.png" style="vertical-align: middle; width: 20px;">**[2023/04/23]** 正式开源中文指令精调大模型----**梦想家（DreamerGPT）**，目前提供v0.1版本下载体验
+- <img src="assets/new.png" style="vertical-align: middle; width: 20px;">**[2023/06/17]** 更新V0.2版本：LLaMa firefly增量训练版本，BLOOM-LoRA版本（`finetune_bloom.py`, `generate_bloom.py`）。
+
+- <img src="assets/new.png" style="vertical-align: middle; width: 20px;">**[2023/04/23]** 正式开源中文指令精调大模型 **梦想家（DreamerGPT）**，目前提供V0.1版本下载体验
 
 已有模型（持续增量训练中，更多模型待更新）：
 
-| 模型名称   | 训练数据                                                     | 权重路径                         | 权重下载                                                     |
-| ---------- | ------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------ |
-| D13b-1-3-1 | Chinese-alpaca-lora-13b-热启动 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-1-alpaca-13b-3-1/` | [[Google Drive](https://drive.google.com/file/d/1PKT32_IMaHyE2qdt_W40Y6wxk3HVIma-/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D13b-1-3-1/tree/main)] |
-| D13b-2-2-2 | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate | `output/rerun-2-alpaca-13b-2-2/` | [[Google Drive](https://drive.google.com/file/d/1WgzzKbc6IatBiHCcaQA5K74Y8fTEckSs/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D13b-2-2-2/tree/main)] |
-| D13b-2-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5 | `output/rerun-2-alpaca-13b-3/`   | [[Google Drive](https://drive.google.com/file/d/1sM2qNJcz0K43Y-MmhDXvw3hfqOtvzeNI/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D13b-2-3/tree/main)] |
-| D7b-4-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0              | `output/run-4-alpaca-7b-1/`      | [[Google Drive](https://drive.google.com/file/d/1EAzMpgYA7nQ-9XR4NH4iwAtp83UIH3Bv/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D7b-4-1/tree/main)] |
+| 模型名称   | 训练数据                                                     = | 权重下载                                                     |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **V0.2** | --- |  --- |
+| D13b-3-3 | D13b-2-3 + firefly-train-1 | [[HuggingFace](https://huggingface.co/DreamerGPT/D13b-3-3/tree/main)] |
+| D7b-5-1 | D7b-4-1 + firefly-train-1 | [[HuggingFace](https://huggingface.co/DreamerGPT/D7b-5-1/tree/main)] |
+| **V0.1** | --- | --- |
+| D13b-1-3-1 | Chinese-alpaca-lora-13b-热启动 + COIG-part1、COIG-translate + PsyQA-5 | [[Google Drive](https://drive.google.com/file/d/1PKT32_IMaHyE2qdt_W40Y6wxk3HVIma-/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D13b-1-3-1/tree/main)] |
+| D13b-2-2-2 | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate  | [[Google Drive](https://drive.google.com/file/d/1WgzzKbc6IatBiHCcaQA5K74Y8fTEckSs/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D13b-2-2-2/tree/main)] |
+| D13b-2-3   | Chinese-alpaca-lora-13b-热启动 + firefly-train-0 + COIG-part1、COIG-translate + PsyQA-5    | [[Google Drive](https://drive.google.com/file/d/1sM2qNJcz0K43Y-MmhDXvw3hfqOtvzeNI/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D13b-2-3/tree/main)] |
+| D7b-4-1    | Chinese-alpaca-lora-7b-热启动 + firefly-train-0                    | [[Google Drive](https://drive.google.com/file/d/1EAzMpgYA7nQ-9XR4NH4iwAtp83UIH3Bv/view?usp=sharing)] [[HuggingFace](https://huggingface.co/DreamerGPT/D7b-4-1/tree/main)] |
 
 [模型测评抢先看](#Test)
 
